@@ -1,0 +1,73 @@
+/* .red {
+    width: max-content;
+    background-color: black;
+    color: yellow;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.red:nth-child(5) {
+    color: tomato;
+}
+
+.red:hover {
+    color: violet;
+    background-color: yellow;
+} */
+
+/* pseudo class : */
+/* 1s = 1000ms */
+/* 0.025 */
+/* last, first-child */
+/* 
+.input {
+    border: 1px solid rgb(0, 0, 123);
+}
+
+.btn {
+    border: 1px solid #ffff0080;
+    background-color: yellow;
+    color: white;
+    border-radius: 10px;
+    transition: 300ms;
+}
+
+.btn:hover {
+    background-color: white;
+    color: yellow;
+    cursor: pointer;
+}
+
+.input:focus {
+    outline: none;
+    border-color: yellow;
+}
+
+.circle {
+    width: 300px;
+    height: 300px;
+    border: 3px solid yellow;
+    border-radius: 50%;
+} */
+
+
+/* h1 {
+    width: max-content;
+    border: 2px solid #000;
+    padding: 1rem 2rem 3rem .5rem;
+    margin: 0;
+} */
+
+/* * {
+    margin: 0;
+    padding: 0;
+}
+
+.heading {
+    margin: 1rem;
+    width: max-content;
+}
+
+.heading:hover {
+    background-color: yellow;
+} */
