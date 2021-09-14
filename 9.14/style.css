@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    background-color: black;
+}
+/* linear, radial, conic */
+.box .cover {
+    width: 100%;
+    height: 100%;
+    transform: rotate(9deg);
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background-image: conic-gradient(
+        black 0% 5%, 
+        white 5% 10%,
+        black 10% 15%, 
+        white 15% 20%,
+        black 20% 25%, 
+        white 25% 30%,
+        black 30% 35%, 
+        white 35% 40%,
+        black 40% 45%, 
+        white 45% 50%,
+        black 50% 55%, 
+        white 55% 60%,
+        black 60% 65%, 
+        white 65% 70%,
+        black 70% 75%, 
+        white 75% 80%,
+        black 80% 85%, 
+        white 85% 90%,
+        black 90% 95%, 
+        white 95% 100%
+    );
+    position: relative;
+}
+
+.box .cover .outer {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    transform: rotate(18deg);
+    background-image: conic-gradient(
+        rgb(2, 1, 1) 0% 5%, 
+        white 5% 10%,
+        black 10% 15%, 
+        white 15% 20%,
+        black 20% 25%, 
+        white 25% 30%,
+        black 30% 35%, 
+        white 35% 40%,
+        black 40% 45%, 
+        white 45% 50%,
+        black 50% 55%, 
+        white 55% 60%,
+        black 60% 65%, 
+        white 65% 70%,
+        black 70% 75%, 
+        white 75% 80%,
+        black 80% 85%, 
+        white 85% 90%,
+        black 90% 95%, 
+        white 95% 100%
+    );
+    position: absolute;
+}
+
+.box .cover .outer.inner {
+    top: 50px;
+    left: 50px;
+    right: 50px;
+    bottom: 50px;
+}
+
+.box .cover .outer.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box .cover .outer.center .bulls {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+}
+
+.bulls__eye {
+    width: 50%;
+    height: 50%;
+    background-color: red;
+    border-radius: 50%;
+}
+
+/* mnfansubs.net , ikon.mn */
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: yellow;
+    clip-path: polygon(0 20%, 100% 0, 100% 80% ,0 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container button {
+    padding: 1.5rem 6rem;
+    background-color: black;
+    border: none;
+    color: white;
+    font-weight: bold;
+    clip-path: polygon(0 50%, 10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%);
+    position: relative;
+}
+
+.container button::after {
+    content: "Press!";
+    position: absolute;
+    background-color: yellow;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    clip-path: polygon(1% 50%, 10% 0, 90% 0, 99% 50%, 90% 100%, 10% 100%);
+}
+
+
+/* Transform and animation */
+
+/* 
+    rotate - erguulne
+    scale - hemjeeg oorchloh
+    translate - zoono
+    skew - hazailt
+*/
+
+.transform {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent {
+    perspective: 800px;
+}
+
+.transform .el {
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+    transition: .3s ease-in-out;
+    
+}
+
+.transform .parent:hover .el {
+    animation: ergeh 2s linear infinite;
+}
+
+@keyframes ergeh {
+    from {
+        transform: rotateY(0);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+/* ner ajillah-hugatsaa (ease-in-out, linear) davtamj */
+/* https://jacekjeznach.com/ */
