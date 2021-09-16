@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Responsive design */
+
+/* 
+    Desktop first - max-width 1024px
+    Mobile first - min-width
+*/
+
+
+
+/* media query */
+
+
+/* 
+    Break points
+    extra small - xs <= 576px;
+    small - 576 < sm < 768px;
+    medium - 768px <= md < 1024px;
+    large - 1024px <= lg < 1200px;
+    extra large - 1200px <= xl < 1400px;
+    extra extra large - xxl >= 1400px;
+*/
+
+.header {
+    width: 100%;
+    background-color: #34495e;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo {
+    padding-left: 1rem;
+}
+
+.header .menu__mobile {
+    font-size: 20px;
+    padding: 1rem;
+}
+
+.header .menu__desktop {
+    display: none;
+}
+
+.main {
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.wrap1 {
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 250px);
+    gap: 1rem;
+}
+
+
+.wrap1 .box {
+    background-color: #34495e;
+}
+
+.wrap2 {
+    display: grid;
+    width: 95%;
+    margin: 1rem auto;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.wrap2 .box {
+    height: 250px;
+    background-color: #34495e;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+    background-color: #34495e;
+    color: white;
+}
+
+@media (min-width: 768px){
+    .header .menu__mobile {
+        display: none;
+    }
+
+    .header .menu__desktop {
+        display: flex;
+        list-style: none;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .header .menu__desktop li {
+        padding: 1rem 2rem;
+        transition: .3s;
+    }
+    .header .menu__desktop li:hover {
+        background-color: white;
+        color: #34495e;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 1024px){
+    .wrap1 {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 250px);
+    }
+
+    .wrap1 .box:nth-child(1) {
+        grid-column: 1/3;
+        grid-row: 1/-1;
+    }
+
+    .wrap2 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .wrap2 .box:nth-child(1) {
+        grid-column: 1/-1;
+    }
+}
+
+/* http://inspection.gov.mn/ - gert clone hiih */
