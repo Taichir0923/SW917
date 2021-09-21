@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapg">
+      <div class="box box--1">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <h1>1</h1>
+            </div>
+            <div class="swiper-slide">2</div>
+            <div class="swiper-slide">3</div>
+          </div>
+        </div>
+      </div>
+      <div class="box box--2">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <h1>1</h1>
+            </div>
+            <div class="swiper-slide">2</div>
+            <div class="swiper-slide">3</div>
+          </div>
+        </div>
+      </div>
+      <div class="box box--3">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <h1>1</h1>
+            </div>
+            <div class="swiper-slide">2</div>
+            <div class="swiper-slide">3</div>
+          </div>
+        </div>
+      </div>
+      <div class="box box--4"></div>
+      <div class="box box--5"></div>
+      <div class="box box--6"></div>
+    </div>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+      const swiper1 = new Swiper(".box--1 .swiper", {
+        loop: true,
+        effect: "cards",
+        grabCursor: true,
+        cardEffect: {
+          shadow: true,
+          slideShadows: true,
+          shadowOffset: 20,
+          shadowScale: 0.94,
+        },
+      });
+      const swiper2 = new Swiper(".box--2 .swiper", {
+        loop: true,
+        effect: "cube",
+        grabCursor: true,
+        cubeEffect: {
+          shadow: true,
+          slideShadows: true,
+          shadowOffset: 20,
+          shadowScale: 0.94,
+        },
+      });
+
+      const swiper3 = new Swiper(".box--3 .swiper", {
+        loop: true,
+        effect: "flip",
+        grabCursor: true,
+        flipEffect: {
+          shadow: true,
+          slideShadows: true,
+          shadowOffset: 20,
+          shadowScale: 0.94,
+        },
+      });
+    </script>
+  </body>
+</html>
