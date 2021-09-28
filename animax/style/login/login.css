@@ -239,7 +239,7 @@ h6 {
 }
 
 .main__form form .input button.icon:focus {
-  outline: none;
+  outline: #f53b57;
 }
 
 .main__form form .input input {
