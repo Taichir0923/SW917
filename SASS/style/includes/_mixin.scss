@@ -15,3 +15,11 @@
         grid-template-columns: repeat($col, 1fr);
     }
 }
+
+@mixin flexBox($direction, $justify, $items, $gap) {
+    display: flex;
+    gap: $gap;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $items;
+}
