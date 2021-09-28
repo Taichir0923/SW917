@@ -5,7 +5,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: $myMainColor;
-    color: white;
+    color: $white;
     .logo {
         padding-left: 1rem;
     }
@@ -19,8 +19,8 @@
                 padding: 1rem 2rem;
                 transition: .3s;
                 &:hover {
-                    background-color: white;
-                    color: #34495e;
+                    background-color: $white;
+                    color: $myMainColor;
                     cursor: pointer;
                 }
             }

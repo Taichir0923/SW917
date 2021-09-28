@@ -1,0 +1,17 @@
+@mixin gridBox($gap, $col) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $gap;
+    
+    @media (min-width: 576px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1024px){
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: 1200px){
+        grid-template-columns: repeat($col, 1fr);
+    }
+}

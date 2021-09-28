@@ -1,0 +1,19 @@
+.main {
+    width: 100%;
+    margin: 1.5rem 0;
+    .wrap {
+        width: 95%;
+        margin: auto;
+        @include gridBox(5px, 5);
+        .box {
+            height: 200px;
+            border: 4px solid $myMainColor;
+            background-color: $mainColorTrans;
+            border-radius: 10px;
+        }
+    }
+}
+
+// Parameter
+// 2x - 8 = 6 => x = 7
+// 2ax - 8b = 6 => 
