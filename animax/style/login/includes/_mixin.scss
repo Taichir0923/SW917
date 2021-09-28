@@ -4,3 +4,9 @@
     justify-content: $justify;
     align-items: $items;
 }
+
+@mixin size {
+    @media (min-width: 576px) {
+        min-width: 375px !important;
+    }
+}

@@ -27,7 +27,7 @@
         .hero-logo {
             width: 100px;
             height: 100px;
-            border: 5px solid white;
+            border: 7px solid white;
             border-radius: 50%;
             background-color: $mainRed;
             position: absolute;
@@ -49,6 +49,7 @@
         @include flexBox(row, center, center);
         form {
             @include flexBox(column, center, center);
+            @include size;
             min-width: 320px;
             .logo {
                 width: 110px;
@@ -64,15 +65,17 @@
                 }
 
                 .check {
-                    width: 24px;
-                    height: 24px;
+                    width: 32px;
+                    height: 32px;
+                    font-size: 14px;
                     color: white;
                     background-color: $green;
                     @include flexBox(row, center, center);
                     border-radius: 50%;
                     position: absolute;
-                    top: 5px;
-                    right: 5px;
+                    top: 0px;
+                    right: 0px;
+                    border: 3px solid #fff;
                 }
             }
 
@@ -82,7 +85,7 @@
                 margin-top: 1rem;
                 button.icon {
                     border: $inputBorder;
-                    padding: .5rem;
+                    padding: .75rem;
                     width: max-content;
                     background-color: white;
                     color: $greyColor;
@@ -90,18 +93,25 @@
                     border-bottom-left-radius: 4px;
                     border-top-left-radius: 4px;
                     &:focus {
-                        outline: $mainRed;
+                        outline: none;
+                        // border: 1px solid $mainRed;
+                        // border-right: none;
                     }
                 }
                 input {
                     border: $inputBorder;
-                    padding: .5rem;
+                    padding: .75rem .75rem .75rem 0;
                     width: 100%;
                     border-left: none;
                     border-bottom-right-radius: 4px;
                     border-top-right-radius: 4px;
                     &:focus {
                         outline: none;
+                        // border: 1px solid $mainRed;
+                        // border-left: none;
+                    }
+                    &::placeholder {
+                        color: $greyColor;
                     }
                 }
             }
@@ -109,15 +119,57 @@
             button.login {
                 width: 100%;
                 margin-top: 1rem;
-                padding: .75rem;
+                padding: .85rem;
                 border-radius: 9999px;
                 border: 1px solid $mainRed;
                 background-color: $mainRed;
                 color: white;
                 cursor: pointer;
+                font-weight: bold;
                 &:hover {
                     opacity: .8;
                 }
+            }
+
+            .options {
+                margin: 1rem 0;
+                width: 100%;
+                font-size: 14px;
+                color: $greyColor;
+                @include flexBox(row, space-between, center);
+                cursor: pointer;
+                p {
+                    transition: all .3s;
+                    &:hover {
+                        color: $mainRed;
+                    }
+                }
+            }
+            .notes {
+                width: 320px;
+                @include size;
+                font-size: 14px;
+                margin: 1rem 0;
+                padding: 1rem;
+                border: 1px dashed $mainRed;
+                border-radius: 4px;
+                color: #344258;
+                .warning {
+                    color: $mainRed;
+                    line-height: 1.5;
+                    margin-bottom: 1rem;
+                }
+
+                ul {
+                    list-style: none;
+                    line-height: 1.5;
+                    padding-left: .25rem;
+                    li {
+                        @include flexBox(row, flex-start, center);
+                        gap: .5rem;
+                    }
+                }
+
             }
         }
     }
