@@ -1,55 +1,8 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import './includes/variables';
+@import './includes/reset';
+@import './includes/header';
+@import './includes/main';
 
-.header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #34495e;
-    color: white;
-    .logo {
-        padding-left: 1rem;
-    }
-
-    .menu {
-        &__desktop {
-            list-style: none;
-            display: flex;
-            li {
-                font-weight: bold;
-                padding: 1rem 2rem;
-                transition: .3s;
-                &:hover {
-                    background-color: white;
-                    color: #34495e;
-                    cursor: pointer;
-                }
-            }
-        }
-
-        &__mobile {
-            display: none;
-            padding: 1rem;
-        }
-        @media (max-width: 768px){
-            &__mobile {
-                display: block;
-            }
-
-            &__desktop {
-                display: none;
-            }
-        }
-    }
-
-    // &--mobile {
-    //     background-color: aqua;
-    // }
-}
 
 // BEM - Block, Element, Modify
 
@@ -66,3 +19,16 @@
 
 // ulaan
 // tsenher 
+
+
+// Variables
+// reset 
+// mixing
+// header
+// main
+// footer
+// responsive
+
+// var
+// mixin
+// reset
