@@ -1,0 +1,53 @@
+.header {
+    width: 100%;
+    background-color: $palette;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: 3px 1px 6px 0px rgba(0,0,0,0.75);
+    &__mobile {
+        @include flexBox(row, space-between, center, 0);
+        .logo {
+            padding-left: 1rem;
+            img {
+                width: 100px;
+            }
+            flex-grow: 1;
+        }
+
+        .items {
+            width: 15%;
+            border-left: $border;
+            text-align: center;
+            padding: 1rem 0;
+            border-color: #28344a !important;
+            .toggle {
+                border-radius: 99999px;
+                border: $border;
+                border-width: 2px;
+                padding: 2px 1px;
+                width: 35px;
+                font-size: 13px;
+                text-align: right;
+                margin: auto;
+                .circle {
+                    padding: 1px;
+                    background-color: $greyColor;
+                    width: 25px;
+                    height: 25px;
+                    color: white;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    // &__desktop {
+
+    // }
+
+    // @media (min-width: ){
+
+    // }
+}

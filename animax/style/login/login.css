@@ -291,6 +291,11 @@ h6 {
   font-weight: bold;
 }
 
+.main__form form button.login a {
+  text-decoration: none;
+  color: white;
+}
+
 .main__form form button.login:hover {
   opacity: .8;
 }

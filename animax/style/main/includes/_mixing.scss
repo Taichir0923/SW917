@@ -1,0 +1,63 @@
+@mixin flexBox($direction, $justify, $item, $gap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $item;
+    gap: $gap;
+}
+
+@mixin animeCard($width, $height, $opacity, $opacity1){
+    width: $width;
+    height: $height;
+    border-radius: 8px;
+    background-image: url(https://animax.mn/uploaded/images/2021/Sep/Toriko_.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    .overlay {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,70, .25);
+        opacity: 0;
+        @include flexBox(row, center, center, 0);
+        color: $mainRed;
+        transition: .3s;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    .episode {
+        position: absolute;
+        bottom: .75rem;
+        left: .75rem;
+        padding: 10px;
+        background-color: black;
+        color: white;
+        border-radius: 4px;
+        opacity: $opacity;
+    }
+
+    .status {
+        position: absolute;
+        top: .75rem;
+        right: .75rem;
+        padding: 10px;
+        background-color: $green;
+        color: white;
+        border-radius: 4px;
+        opacity: $opacity1;
+    }
+    &:hover {
+        .overlay {
+            opacity: 1;
+        }
+    }
+}
+
+@mixin button {
+    background-color: $mainRed;
+    width: max-content;
+    color: white;
+    border-radius: 4px;
+    padding: .75rem 1rem;
+}
