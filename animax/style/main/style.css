@@ -13,6 +13,25 @@ body {
   font-size: 13px;
 }
 
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .header {
   width: 100%;
   background-color: #161d29;
@@ -117,6 +136,75 @@ body {
   width: calc(100% - 300px);
   height: 100vh;
   padding-bottom: 1rem;
+}
+
+.main .wrap .content-wrap .slides {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 1rem;
+}
+
+.main .wrap .content-wrap .slides .box {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background-image: url(https://animax.mn/uploaded/images/2021/Sep/Toriko_.jpg);
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+.main .wrap .content-wrap .slides .box .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 70, 0.25);
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0;
+  color: #f53b57;
+  -webkit-transition: .3s;
+  transition: .3s;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.main .wrap .content-wrap .slides .box .episode {
+  position: absolute;
+  bottom: .75rem;
+  left: .75rem;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  opacity: 0;
+}
+
+.main .wrap .content-wrap .slides .box .status {
+  position: absolute;
+  top: .75rem;
+  right: .75rem;
+  padding: 10px;
+  background-color: #1ce589;
+  color: white;
+  border-radius: 4px;
+  opacity: 1;
+}
+
+.main .wrap .content-wrap .slides .box:hover .overlay {
+  opacity: 1;
 }
 
 .main .wrap .content-wrap .anime-wrap {
