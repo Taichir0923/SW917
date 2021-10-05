@@ -98,10 +98,6 @@
   height: 100%;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
 .bg-red {
   background-color: orangered;
 }
