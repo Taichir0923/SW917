@@ -16,6 +16,12 @@
     justify-content: space-between;
     align-items: center;
     z-index: 999;
+    .logo {
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
     .menu {
         .toggle-btn {
             position: fixed;
@@ -124,4 +130,8 @@
             }
         }
     }
+}
+
+.targetted:target {
+    background-color: yellowgreen !important;
 }

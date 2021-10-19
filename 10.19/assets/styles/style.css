@@ -25,6 +25,11 @@
   z-index: 999;
 }
 
+.header .logo a {
+  text-decoration: none;
+  color: white;
+}
+
 .header .menu .toggle-btn {
   position: fixed;
   top: .6rem;
@@ -149,5 +154,9 @@
   -webkit-transform: rotate(-315deg);
           transform: rotate(-315deg);
   bottom: 0;
+}
+
+.targetted:target {
+  background-color: yellowgreen !important;
 }
 /*# sourceMappingURL=style.css.map */
